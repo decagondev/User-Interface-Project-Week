@@ -1,5 +1,5 @@
 .jumbotron-home {
-  width: 1030px;
+  width: 1024px;
   height: 600px;
   margin: 0 auto;
   background: url("../img/home/home-jumbotron.png");
@@ -10,20 +10,19 @@
     background-position: center;
     background-size: cover;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 320px;
     height: 200px;
   }
 
   img {
-    width: 100%;
+    width: 320px;
   }
   
   .container {
-    height: 100%;
 
     @media (max-width: 400px) {
       height: 260px;
-      width: 100%
+      width: 320px;
     }
   }
   
@@ -56,6 +55,9 @@
     margin-bottom: 85px;
     img {
       width: 100%;
+      @media (max-width: 400px) {
+        width: 320px;
+      }
     }
 
     @media (max-width: 400px) {
@@ -127,7 +129,10 @@
 
 .bottom-content {
   img {
-    width: 100%;
+    width: 100vw;
+    @media (max-width: 400px) {
+      width: 320px;
+    }
   }
   h2 {
     .sub-heading;
@@ -136,19 +141,18 @@
 
   .gray-header-and-img-container {
     position: relative;
-
     @media (max-width: 400px) {
-      width: 400px;
+      width: 320px;
       right: 15px;
     }
   }
-
+  
   .gray-header-and-img-container h3 {
     .header-box;
     position: absolute;
     right: 0;
     bottom: -30px;
-
+    
     @media (max-width: 400px) {
       left: -10%;
       bottom: -50px;
@@ -156,7 +160,7 @@
       margin: 0 auto;
     }
   }
-
+  
   .txt-content {
     margin: 95px 200px;
 

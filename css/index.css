@@ -133,6 +133,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
@@ -151,7 +154,7 @@ body {
 }
 @media (max-width: 400px) {
   .container {
-    width: 90%;
+    width: 320px;
   }
 }
 .img-desktop {
@@ -295,7 +298,7 @@ header .close-button:hover {
   }
 }
 .jumbotron-home {
-  width: 1030px;
+  width: 1024px;
   height: 600px;
   margin: 0 auto;
   background: url("../img/home/home-jumbotron.png");
@@ -307,20 +310,17 @@ header .close-button:hover {
     background-position: center;
     background-size: cover;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 320px;
     height: 200px;
   }
 }
 .jumbotron-home img {
-  width: 100%;
-}
-.jumbotron-home .container {
-  height: 100%;
+  width: 320px;
 }
 @media (max-width: 400px) {
   .jumbotron-home .container {
     height: 260px;
-    width: 100%;
+    width: 320px;
   }
 }
 .jumbotron-home h1 {
@@ -355,6 +355,11 @@ header .close-button:hover {
 }
 .top-content .txt-and-img-content img {
   width: 100%;
+}
+@media (max-width: 400px) {
+  .top-content .txt-and-img-content img {
+    width: 320px;
+  }
 }
 @media (max-width: 400px) {
   .top-content .txt-and-img-content {
@@ -423,7 +428,12 @@ header .close-button:hover {
   }
 }
 .bottom-content img {
-  width: 100%;
+  width: 100vw;
+}
+@media (max-width: 400px) {
+  .bottom-content img {
+    width: 320px;
+  }
 }
 .bottom-content h2 {
   font-size: 2.4rem;
@@ -436,7 +446,7 @@ header .close-button:hover {
 }
 @media (max-width: 400px) {
   .bottom-content .gray-header-and-img-container {
-    width: 400px;
+    width: 320px;
     right: 15px;
   }
 }
@@ -487,21 +497,21 @@ header .close-button:hover {
 }
 .jumbotron-services {
   width: 100%;
-  max-width: 1030px;
+  max-width: 1024px;
   height: 250px;
   margin: 0 auto;
   background: url("../img/services/services-jumbotron.png");
 }
 @media (max-width: 400px) {
   .jumbotron-services {
-    width: 100vw;
+    width: 320px;
     height: 260px;
     margin: 0 auto;
     background: url("../img/services/services-mobile-jumbotron.png") no-repeat;
   }
 }
 .jumbotron-services .container {
-  height: 100%;
+  width: 100%;
 }
 @media (max-width: 400px) {
   .jumbotron-services .container {
@@ -609,7 +619,131 @@ header .close-button:hover {
   color: #ffffff;
   background-color: #5e9fb9;
 }
-.container {
+.jumbotron-projects {
+  width: 100%;
+  max-width: 1024px;
+  height: 250px;
+  margin: 0 auto;
+  background: url("../img/projects/projects-jumbotron.png");
+}
+@media (max-width: 400px) {
+  .jumbotron-projects {
+    width: 100vw;
+    height: 260px;
+    margin: 0 auto;
+    background: url("../img/projects/projects-mobile-jumbotron.png") no-repeat;
+  }
+}
+.jumbotron-projects .container-projects {
+  height: 100%;
+}
+@media (max-width: 400px) {
+  .jumbotron-projects .container-projects {
+    height: 260px;
+    width: 325px;
+  }
+}
+.jumbotron-projects h1 {
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 7.5rem;
+  color: #ffffff;
+  position: absolute;
+  top: 155px;
+}
+@media (max-width: 400px) {
+  .jumbotron-projects h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    top: 200px;
+    left: 10px;
+  }
+}
+.projects .projects-menu {
+  margin: 30px 0 0 0;
+  width: 100%;
+}
+.projects .projects-menu .tab-container-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 45px 0;
+}
+@media (max-width: 400px) {
+  .projects .projects-menu .tab-container-projects {
+    flex-direction: column;
+  }
+}
+.projects .tab-item-projects {
+  display: none;
+  margin: 20px 0 55px 0;
+}
+@media (max-width: 400px) {
+  .projects .tab-item-projects {
+    margin: 20px 0 60px 0;
+  }
+}
+.projects .tab-item-projects h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222222;
+  margin: 24px 0;
+}
+.projects .tab-item-projects .txt-and-img-container-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 400px) {
+  .projects .tab-item-projects .txt-and-img-container-projects {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.projects .tab-item-projects .txt-and-img-container-projects .txt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 35px;
+}
+@media (max-width: 400px) {
+  .projects .tab-item-projects .txt-and-img-container-projects .txt-container {
+    margin-right: 0;
+  }
+}
+.projects .tab-item-projects .txt-and-img-container-projects .txt-container p {
+  margin-bottom: 35px;
+}
+.projects .tab-item-selected-projects {
+  display: block;
+}
+.projects .tabs-link-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 185px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 1px solid black;
+}
+.projects .tabs-link-projects:hover {
+  color: #ffffff;
+  background: #222222;
+  cursor: pointer;
+}
+@media (max-width: 400px) {
+  .projects .tabs-link-projects {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.projects .tabs-link-selected-projects {
+  color: #ffffff;
+  background-color: #5e9fb9;
+}
+.container-contact {
   width: 730px;
   margin: 0 auto;
 }
@@ -628,11 +762,11 @@ header .close-button:hover {
     background: url("../img/contact/contact-mobile-jumbotron.png") no-repeat;
   }
 }
-.jumbotron-contact .container {
+.jumbotron-contact .container-contact {
   height: 100%;
 }
 @media (max-width: 400px) {
-  .jumbotron-contact .container {
+  .jumbotron-contact .container-contact {
     width: 320px;
     height: 260px;
   }
@@ -772,7 +906,7 @@ header .close-button:hover {
   margin: 0 auto;
   background: url("../img/about/about_jumbotron.jpg");
 }
-.jumbotron-about .container {
+.jumbotron-about .container-about {
   height: 100%;
 }
 .jumbotron-about h1 {
@@ -848,130 +982,6 @@ header .close-button:hover {
 .bottom-content-about .company-logos {
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.jumbotron-projects {
-  width: 100%;
-  max-width: 1024px;
-  height: 250px;
-  margin: 0 auto;
-  background: url("../img/projects/projects-jumbotron.png");
-}
-@media (max-width: 400px) {
-  .jumbotron-projects {
-    width: 100vw;
-    height: 260px;
-    margin: 0 auto;
-    background: url("../img/projects/projects-mobile-jumbotron.png") no-repeat;
-  }
-}
-.jumbotron-projects .container {
-  height: 100%;
-}
-@media (max-width: 400px) {
-  .jumbotron-projects .container {
-    height: 260px;
-    width: 325px;
-  }
-}
-.jumbotron-projects h1 {
-  font-size: 6.4rem;
-  font-weight: 700;
-  line-height: 7.5rem;
-  color: #ffffff;
-  position: absolute;
-  top: 155px;
-}
-@media (max-width: 400px) {
-  .jumbotron-projects h1 {
-    font-size: 3.5rem;
-    line-height: 4rem;
-    top: 200px;
-    left: 10px;
-  }
-}
-.projects .projects-menu {
-  margin: 30px 0 0 0;
-  width: 100%;
-}
-.projects .projects-menu .tab-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 45px 0;
-}
-@media (max-width: 400px) {
-  .projects .projects-menu .tab-container {
-    flex-direction: column;
-  }
-}
-.projects .tab-item {
-  display: none;
-  margin: 20px 0 55px 0;
-}
-@media (max-width: 400px) {
-  .projects .tab-item {
-    margin: 20px 0 60px 0;
-  }
-}
-.projects .tab-item h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #222222;
-  margin: 24px 0;
-}
-.projects .tab-item .txt-and-img-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-@media (max-width: 400px) {
-  .projects .tab-item .txt-and-img-container {
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-}
-.projects .tab-item .txt-and-img-container .txt-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 35px;
-}
-@media (max-width: 400px) {
-  .projects .tab-item .txt-and-img-container .txt-container {
-    margin-right: 0;
-  }
-}
-.projects .tab-item .txt-and-img-container .txt-container p {
-  margin-bottom: 35px;
-}
-.projects .tab-item-selected {
-  display: block;
-}
-.projects .tabs-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 185px;
-  height: 50px;
-  font-size: 2rem;
-  font-weight: 700;
-  border: 1px solid black;
-}
-.projects .tabs-link:hover {
-  color: #ffffff;
-  background: #222222;
-  cursor: pointer;
-}
-@media (max-width: 400px) {
-  .projects .tabs-link {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-.projects .tabs-link-selected {
-  color: #ffffff;
-  background-color: #5e9fb9;
 }
 footer {
   display: flex;
